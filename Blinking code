@@ -1,3 +1,5 @@
+Code for making an LED blink
+
 void setup () {
 
 pinMode(LED_BUILTIN, OUTPUT);
@@ -11,4 +13,16 @@ delay(1000);
 digitalWrite(LED_BUILTIN, LOW);
 delay(1000);
 
+}
+
+Code for AnalogReadSerial 
+
+void setup () {
+Serial.brgin(9600);
+}
+
+void loop () {
+int sensorValue = analogRead(A0);
+Serial.ptintln(sensorValue);
+delay(1);
 }
