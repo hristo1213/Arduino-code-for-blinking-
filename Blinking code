@@ -18,7 +18,7 @@ delay(1000);
 Code for AnalogReadSerial 
 
 void setup () {
-Serial.brgin(9600);
+Serial.begin(9600);
 }
 
 void loop () {
