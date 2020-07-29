@@ -1,2 +1,2 @@
-# Arduino-code-for-blinking-
-The code used to make LED light blink 
+# Arduino-code-
+A repo for useful Arduino code i found  
