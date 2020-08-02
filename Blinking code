@@ -41,3 +41,24 @@ int buttonState = digitalRead(pushButton);
 Serial.println(buttonState);
 delay(1);
 }
+
+
+Code for Fade 
+
+int led = 9; 
+int brightness = 0;
+int fadeAmount = 5; 
+
+void setup () {
+pinMode(led, OUTPUT);
+}
+
+void loop () {
+analogWrite(led, brightness);
+brighntness = brightness + fadeAmount; 
+if (brighntess <= 0 || brighntness >= 225; {
+   fadeAmount = -fadeAmount;
+   }
+delay(30);
+}
+}
