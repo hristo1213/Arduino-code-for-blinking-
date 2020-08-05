@@ -62,3 +62,27 @@ if (brighntess <= 0 || brighntness >= 225; {
 delay(30);
 }
 }
+
+Code for retrieving data from MQ-135 gas sensor with LCD display
+
+#include <LiguidCrystal.h>
+int sensorValue;
+const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+LiquidCrystal lcd(rs,en,d4,d5,d6,d7);
+void setup () { lcd.begin(16, 2);
+Serial.begin(9600);
+}
+void lopp() {senorValue = analogRead(0);
+Serial.print("AirQuality=");
+Serial.print(sensorValue, DEC);
+Serial.println("PPM");
+lcd.setCursor(0,0);
+lcd.print("AirQuality=")
+lcd.print(sensorValue, DEC);
+lcd.print("PPM");
+lcd.println("        ");
+lcd.print("    ");
+delay(100);
+}
+
+
